@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+        <div th:replace="common/header :: common-header"/>
+        <link type="text/css" th:href="@{/css/styles.css}" rel="stylesheet" media="screen"/>
+</head>
+
+<body>
+<div class="container-fluid">
+
+<div th:replace="common/jumbotron :: common-jumbotron"/>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2 id="heading-two">Thymeleaf learning demo project... :)</h2>
+    </div>
+</div>
+
+<div class="main-body">
+    <div class="row">
+            <div class="col-md-3">
+                <div class="light-color">
+                    <p><a href="/details">div 1</a></p>
+                </div>
+            </div>
+
+        <div class="col-md-3 dark-color">
+            <div class="dark-color">
+                <p>div 2</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 light-color">
+            <div class="light-color">
+                <p>div 3</p>
+            </div>
+        </div>
+
+        <div class="col-md-3 dark-color">
+            <div class="dark-color">
+                <p>div 4</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div><!-- /.container -->
+
+<div th:replace="common/header :: end-scripts"/>
+
+</body>
+</html>

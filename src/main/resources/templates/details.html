@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <div th:replace="common/header :: common-header"/>
+    <link type="text/css" th:href="@{/css/details.css}" rel="stylesheet" media="screen"/>
+
+</head>
+
+
+<body>
+<div class="container-fluid">
+
+    <div th:replace="common/jumbotron :: common-jumbotron"/>
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12" style="background-color: beige">
+                <h1>Detail page of Thymeleaf demo template</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="background-color: #333333">
+                <div style="background-color: #28282A; margin: 5px; width: 506px; height: 320px;">
+                    <img class="center-block" th:src="@{/images/wickedwitchprojectsmoon.png}"/>
+                </div>
+
+            </div>
+            <div class="col-md-6" style="background-color: #586f6f">
+                 <div style="background-color: #ededed; margin: 5px;">
+                     <h2>Detail Page 1 Title</h2>
+                     <p>Tristique. Accumsan fusce dapibus. \
+                         Lacus et elit ornare vulputate taciti potenti ac integer cubilia.\
+                         Phasellus senectus phasellus ante nulla netus ad ligula per \
+                         litora netus magna hymenaeos dapibus congue dui laoreet\
+                         commodo vehicula natoque blandit In volutpat donec morbi \
+                         donec phasellus justo purus mollis nostra ligula tellus Tincidunt \
+                         congue molestie. Sociis leo ipsum, id feugiat sociis convallis \
+                         augue gravida a porta tristique. Maecenas praesent ridiculus \
+                         suscipit placerat porttitor ridiculus at.</p>
+                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                <p id="buy-button"><a class="btn btn-primary btn-lg" href="#" role="button">Buy Now</a></p>
+           </div>
+       </div>
+    </div>
+
+</div>
+
+<div th:replace="common/header :: end-scripts"/>
+
+</body>
+</html>

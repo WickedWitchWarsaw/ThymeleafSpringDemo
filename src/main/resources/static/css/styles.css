@@ -1,0 +1,25 @@
+        .jumbotron {
+        background-image: url('http://www.planwallpaper.com/static/images/maxresdefault_YodSsVN.jpg');
+        color: white;
+        height 350px;
+        margin-top: 20px;
+        margin-bottom:20px;
+           }
+
+           #heading-two{
+           margin: 0px;
+           }
+
+            .main-body{
+            margin-top: 20px;
+            }
+
+           .col-md-3 .light-color{
+           background: #5D5C5A;
+           height: 50px;
+           }
+
+           .col-md-3 .dark-color{
+            background: #141416;
+            height: 50px;
+           }
