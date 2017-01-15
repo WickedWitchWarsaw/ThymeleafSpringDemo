@@ -4,15 +4,14 @@
 <head>
 
     <div th:replace="common/header :: common-header"/>
-    <link type="text/css" th:href="@{/css/details.css}" rel="stylesheet" media="screen"/>
 
 </head>
 
 
 <body>
-<div class="container-fluid">
 
-    <div th:replace="common/jumbotron :: common-jumbotron"/>
+<div class="container-fluid">
+<div th:replace="common/jumbotron :: common-jumbotron"/>
 
 <div class="container">
         <div class="row">
@@ -25,8 +24,8 @@
                 <div style="background-color: #28282A; margin: 5px; width: 506px; height: 320px;">
                     <img class="center-block" th:src="@{/images/wickedwitchprojectsmoon.png}"/>
                 </div>
-
             </div>
+
             <div class="col-md-6" style="background-color: #586f6f">
                  <div style="background-color: #ededed; margin: 5px;">
                      <h2 th:text="#{details.h2.text}"></h2>
@@ -41,6 +40,8 @@
            </div>
        </div>
     </div>
+
+   <div th:replace="common/footer :: common-footer"/>
 
 </div>
 
