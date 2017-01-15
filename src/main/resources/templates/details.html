@@ -17,7 +17,7 @@
 <div class="container">
         <div class="row">
             <div class="col-md-12" style="background-color: beige">
-                <h1>Detail page of Thymeleaf demo template</h1>
+                <h1 th:text="#{details.h1.text}"></h1>
             </div>
         </div>
         <div class="row">
@@ -29,23 +29,15 @@
             </div>
             <div class="col-md-6" style="background-color: #586f6f">
                  <div style="background-color: #ededed; margin: 5px;">
-                     <h2>Detail Page 1 Title</h2>
-                     <p>Tristique. Accumsan fusce dapibus. \
-                         Lacus et elit ornare vulputate taciti potenti ac integer cubilia.\
-                         Phasellus senectus phasellus ante nulla netus ad ligula per \
-                         litora netus magna hymenaeos dapibus congue dui laoreet\
-                         commodo vehicula natoque blandit In volutpat donec morbi \
-                         donec phasellus justo purus mollis nostra ligula tellus Tincidunt \
-                         congue molestie. Sociis leo ipsum, id feugiat sociis convallis \
-                         augue gravida a porta tristique. Maecenas praesent ridiculus \
-                         suscipit placerat porttitor ridiculus at.</p>
+                     <h2 th:text="#{details.h2.text}"></h2>
+                     <p th:text="#{details.par.one}"></p>
                  </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-offset-4 col-md-4">
-                <p id="buy-button"><a class="btn btn-primary btn-lg" href="#" role="button">Buy Now</a></p>
+                <p id="buy-button"><a class="btn btn-primary btn-lg" href="#" role="button" th:text="#{button.buy.text}">Buy Now</a></p>
            </div>
        </div>
     </div>

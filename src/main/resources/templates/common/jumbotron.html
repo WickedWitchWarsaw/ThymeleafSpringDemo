@@ -8,8 +8,8 @@
         <div class="col-md-12">
             <div class="jumbotron">
                 <div class="container">
-                    <h1>Hello Thymeleaf Template</h1>
-                    <p class="lead">This is a Thymeleaf test template page.... ;)</p>
+                    <h1 th:text="#{jumbotron.title.text}">JumbotronMainTitle</h1>
+                    <p class="lead" th:text="#{jumbotron.subtitle.text}"></p>
                 </div>
             </div>
         </div>

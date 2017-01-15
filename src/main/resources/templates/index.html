@@ -13,7 +13,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <h2 id="heading-two">Thymeleaf learning demo project... :)</h2>
+        <h2 id="heading-two" th:text="#{index.title.text}">TitleTwo</h2>
     </div>
 </div>
 
@@ -21,25 +21,25 @@
     <div class="row">
             <div class="col-md-3">
                 <div class="light-color">
-                    <p><a href="/details">div 1</a></p>
+                    <p th:text="#{index.div.one}" href="/details"/>
                 </div>
             </div>
 
         <div class="col-md-3 dark-color">
             <div class="dark-color">
-                <p>div 2</p>
+                <p th:text="#{index.div.two}">div 2</p>
             </div>
         </div>
 
         <div class="col-md-3 light-color">
             <div class="light-color">
-                <p>div 3</p>
+                <p th:text="#{index.div.three}">div 3</p>
             </div>
         </div>
 
         <div class="col-md-3 dark-color">
             <div class="dark-color">
-                <p>div 4</p>
+                <p th:text="#{index.div.four}">div 4</p>
             </div>
         </div>
     </div>
