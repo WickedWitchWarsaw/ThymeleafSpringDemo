@@ -16,7 +16,7 @@
 <div class="container">
         <div class="row">
             <div class="col-md-12" style="background-color: beige">
-                <h1 th:text="#{details.h1.text}"></h1>
+                <h1 th:text="${product.courseName}"></h1>
             </div>
         </div>
         <div class="row">
@@ -28,8 +28,8 @@
 
             <div class="col-md-6" style="background-color: #586f6f">
                  <div style="background-color: #ededed; margin: 5px;">
-                     <h2 th:text="#{details.h2.text}"></h2>
-                     <p th:text="#{details.par.one}"></p>
+                     <h2 th:text="${product.courseSubtitle}"></h2>
+                     <p th:text="${product.courseDescription}"></p>
                  </div>
             </div>
         </div>
