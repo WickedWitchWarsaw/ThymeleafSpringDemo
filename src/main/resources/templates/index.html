@@ -17,6 +17,19 @@
     </div>
 </div>
 
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.courseName}"></td>
+            <td th:text="${product.price}"></td>
+        </tr>
+    </table>
+
 <div class="main-body">
     <div class="row">
             <div class="col-md-3">

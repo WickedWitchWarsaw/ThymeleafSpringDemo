@@ -8,8 +8,13 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
+import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.view.ThymeleafViewResolver;
+import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 import java.util.Locale;
+
+import static org.springframework.http.MediaType.TEXT_HTML_VALUE;
 
 /**
  * Created by ZuZ on 2017-01-14.
@@ -18,10 +23,11 @@ import java.util.Locale;
 public class I18NConfig extends WebMvcConfigurerAdapter {
 
     @Bean
-    ReloadableResourceBundleMessageSource messageSource(){
+    ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource bundleMessageSource = new ReloadableResourceBundleMessageSource();
         bundleMessageSource.setBasename("classpath:i18n/messages");
         bundleMessageSource.setCacheSeconds(1800);
+        bundleMessageSource.setDefaultEncoding("UTF-8");
         return bundleMessageSource;
     }
 
@@ -33,7 +39,7 @@ public class I18NConfig extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    LocaleChangeInterceptor localeChangeInterceptor(){
+    LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
         return localeChangeInterceptor;

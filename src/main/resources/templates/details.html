@@ -14,24 +14,47 @@
 <div th:replace="common/jumbotron :: common-jumbotron"/>
 
 <div class="container">
-        <div class="row">
-            <div class="col-md-12" style="background-color: beige">
+        <div class="row" style="background-color: #EDEDED">
+            <div class="col-md-12" style="background-color: #EDEDED">
                 <h1 th:text="${product.courseName}"></h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6" style="background-color: #333333">
-                <div style="background-color: #28282A; margin: 5px; width: 506px; height: 320px;">
+
+ <div class="row course-listing" style="background-color: #EDEDED">
+      <div class="col-md-6">
+        <div class="row" style="padding-bottom: 5px">
+            <div class="col-md-12" style="background-color: #333333">
+                <div style="background-color: #28282A; margin: 5px; width: 506px; height: 323px;">
                     <img class="center-block" th:src="@{/images/wickedwitchprojectsmoon.png}"/>
                 </div>
             </div>
+        </div>
 
-            <div class="col-md-6" style="background-color: #586f6f">
-                 <div style="background-color: #ededed; margin: 5px;">
-                     <h2 th:text="${product.courseSubtitle}"></h2>
-                     <p th:text="${product.courseDescription}"></p>
-                 </div>
+
+    <div class="row course-listing-extra-info col-xs-12">
+        <div class="col-xs-8">
+            <img align="left" alt="wickedWitch"
+                 th:src="@{'/images/'+${product.author.image}}"
+                 class="img-circle"/>
+            <div class="small course-author-name" th:text="${(product.author.firstName)
+                                                         + ' ' + (product.author.lastName)}">
+                Author Name
             </div>
+        </div>
+        <div class="col-xs-4">
+            <div class="small course-price" th:text="${product.price > 0 ? '$' + product.price : 'FREE'}">
+                $PRICE
+            </div>
+        </div>
+    </div>
+ </div>
+
+          <div class="col-md-6" style="background-color: #586f6f">
+              <div style="background-color: #ededed; margin: 5px;">
+                  <h2 th:text="${product.courseSubtitle}"></h2>
+                  <p th:text="${product.courseDescription}"></p>
+              </div>
+          </div>
         </div>
 
         <div class="row">
@@ -41,7 +64,10 @@
        </div>
     </div>
 
-   <div th:replace="common/footer :: common-footer"/>
+
+
+
+    <div th:replace="common/footer :: common-footer"/>
 
 </div>
 

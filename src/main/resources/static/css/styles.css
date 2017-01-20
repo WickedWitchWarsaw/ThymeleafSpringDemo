@@ -37,3 +37,42 @@
              margin-top: 5px;
              margin-bottom: 100px;
              }
+
+                     .course-listing .course-listing-title {
+                         color: #6cb44a;
+                         font-size: 18px;
+                         font-weight: bold;
+                         line-height: 25px;
+                         max-height: 70px;
+                         overflow: hidden;
+                         padding: 16px 16px 4px;
+                     }
+                     .course-listing .course-listing-subtitle {
+                         color: #586f6f;
+                         font-size: 14px;
+                         font-weight: 200;
+                         max-height: 65px;
+                         overflow: hidden;
+                         padding: 5px 16px;
+                     }
+                     .course-listing .course-listing-extra-info .course-price {
+                         color: #6eae50 !important;
+                         font-size: 15px;
+                         font-weight: bold;
+                         line-height: 34px;
+                         padding-right: 10px;
+                         text-align: right;
+                     }
+                     .course-listing .course-listing-extra-info .course-author-name {
+                         font-size: 15px;
+                         font-weight: 200;
+                         line-height: 30px;
+                         max-height: 30px;
+                         overflow: hidden;
+                         padding-left: 5px;
+                     }
+                     .course-listing .course-listing-extra-info .course-bundle {
+                         font-size: 15px;
+                         font-weight: 200;
+                         line-height: 30px;
+                     }
