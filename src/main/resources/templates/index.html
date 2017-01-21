@@ -17,48 +17,33 @@
     </div>
 </div>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-        </tr>
-        <tr th:each="product : ${products}">
-            <td th:text="${product.id}"></td>
-            <td th:text="${product.courseName}"></td>
-            <td th:text="${product.price}"></td>
-        </tr>
-    </table>
-
 <div class="main-body">
-    <div class="row">
-            <div class="col-md-3">
-                <div class="light-color">
-                 <p><a th:text="#{index.div.one}" href="/details/1"/></p>
+
+    <div class="row course-list list">
+        <div class="row course-list list">
+            <div th:each="product,it : ${products}">
+                <div th:if="${(it.count gt 0 and it.count lt 4)}">
+                    <div th:replace="common/productdiv :: productdiv">
+
+                    </div>
                 </div>
-            </div>
-
-        <div class="col-md-3 dark-color">
-            <div class="dark-color">
-                <p><a th:text="#{index.div.two}" href="/details/2"/></p>
-            </div>
-        </div>
-
-        <div class="col-md-3 light-color">
-            <div class="light-color">
-                <p><a th:text="#{index.div.three}" href="/details/3"/></p>
-            </div>
-        </div>
-
-        <div class="col-md-3 dark-color">
-            <div class="dark-color">
-                <p><a th:text="#{index.div.four}" href="/details/4"/></p>
             </div>
         </div>
     </div>
-</div>
 
-</div><!-- /.container -->
+    <div class="row course-list list">
+        <div class="row course-list ">
+            <div th:each="product,it : ${products}">
+                <div th:if="${(it.count gt 3 and it.count lt 7)}">
+                    <div th:replace="common/productdiv :: productdiv">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
 
 <div th:replace="common/header :: end-scripts"/>
 
