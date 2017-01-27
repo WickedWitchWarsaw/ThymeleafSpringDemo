@@ -47,6 +47,12 @@
             </div>
         </div>
     </div>
+          <div class="row col-xs-12 category-list">
+              <ol class="breadcrumb">
+                  <li th:each="productCategory : ${product.productCategories}">
+                    <a href="#" th:text="${productCategory.category}">CATEGORY</a></li>
+              </ol>
+          </div>
  </div>
 
           <div class="col-md-6" style="background-color: #586f6f">
