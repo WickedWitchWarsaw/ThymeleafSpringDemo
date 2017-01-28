@@ -80,3 +80,15 @@
                      .breadcrumb{
                      background: #EDEDED;
                      }
+
+                     .form-inline{
+                     color: white;
+                     padding-top: 6px;
+                     background: #212121;
+                    }
+
+                    #loginbtn{
+                    margin-left: 20px;
+                    background: #66676C;
+                    color: white;
+                    }
