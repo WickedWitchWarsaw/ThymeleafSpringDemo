@@ -12,7 +12,7 @@
                 <div class="container-fluid">
 
 <div class="pull-right">
-    <form class="form-inline" th:object="${loginCommand}" th:action="@{/dologin}" method="post">
+    <form class="form-inline" th:object="${loginCommand}" th:action="@{/login}" method="post">
 
         <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
             <p th:text="#{loginCommand.hasErrors}">ERROR</p>
