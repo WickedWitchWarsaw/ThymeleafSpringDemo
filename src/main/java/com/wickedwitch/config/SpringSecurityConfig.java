@@ -28,25 +28,26 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     };
 
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests().antMatchers(PUBLIC_MACHERS).permitAll()
-                .and().formLogin().loginPage("/login").defaultSuccessUrl("/index").permitAll()
-                .and().logout()
-                .deleteCookies("remove")
-                .invalidateHttpSession(true)
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/logout-success")
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
-    }
-
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("admin").password("qwerty").roles("ADMIN", "USER")
-                .and().withUser("user").password("qwerty").roles("ADMIN");
+                .withUser("admin").password("password").roles("ADMIN")
+                .and().withUser("user").password("user").roles( "USER");
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .antMatchers(PUBLIC_MACHERS).permitAll()
+                .and().formLogin().loginPage("/login").defaultSuccessUrl("/").permitAll()
+                .and().logout()
+                    .deleteCookies("remove")
+                    .invalidateHttpSession(true)
+                    .logoutUrl("/logout")
+                    .logoutSuccessUrl("/logout-success")
+                    .logoutRequestMatcher(new AntPathRequestMatcher("/logout"));
     }
 
 }

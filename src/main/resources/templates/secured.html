@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <div th:replace="common/header :: common-header"/>
+</head>
+<body>
+
+<div class="container" style="height: 100vh;">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Spring Security Demo</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+            <h2>User is Logged In</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+            <h2>User is Logged Out</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+            <h2>User Has Role Admin</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+            <h2>User Has Role User</h2>
+        </div>
+    </div>
+</div>
+
+
+    <div th:replace="common/footer :: end-scripts"/>
+</body>
+</html>

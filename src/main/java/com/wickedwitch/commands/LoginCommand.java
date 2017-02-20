@@ -13,7 +13,7 @@ public class LoginCommand {
 
     @NotEmpty
     @Size(min = 6)
-    private String userName;
+    private String username;
 
     @NotEmpty
     @Size(min = 8)
