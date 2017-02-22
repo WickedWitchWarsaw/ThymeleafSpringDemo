@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-                xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+                xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <div th:replace="common/header :: common-header"/>
+    <title>Secured Content</title>
 </head>
 <body>
 
@@ -14,25 +15,26 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" sec:authorize="isAuthenticated()">
         <div class="col-md-10 col-md-offset-2">
-            <h2>User is Logged In</h2>
+            <h2 style="color:green">User is Logged In</h2>
+            <p sec:authentication="principal.username">username</p>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" sec:authorize="!isAuthenticated()">
         <div class="col-md-10 col-md-offset-2">
-            <h2>User is Logged Out</h2>
+            <h2 style="color:red">User is Logged Out</h2>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" sec:authorize="hasRole('ROLE_ADMIN')">
         <div class="col-md-10 col-md-offset-2">
             <h2>User Has Role Admin</h2>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row" sec:authorize="hasRole('ROLE_USER')">
         <div class="col-md-10 col-md-offset-2">
             <h2>User Has Role User</h2>
         </div>
